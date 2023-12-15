@@ -34,7 +34,7 @@ class Board:
         )
 
     def same_length(self, ship, coordinates):
-        return len(ship) == len(coordinates)
+        return ship.length == len(coordinates)
 
     def not_diagonal(self, coordinates):
         return coordinates[0][0] == coordinates[1][0] or coordinates[0][1] == coordinates[1][1]
@@ -52,7 +52,7 @@ class Board:
         return [list(map(chr, range(ord('A'), ord(self.last_letter()) - ship + 2))) for _ in range(ship)]
 
     def number_possibilities(self, ship):
-        return [list(map(str, range(1, self.size - ship + 3))) for _ in range(ship)]
+        return [list(map(str, range(1, self.size - ship.length + 3))) for _ in range(ship.length)]
 
     def not_overlapping(self, ship, coordinates):
         return all(self.cells[cell].ship is None for cell in coordinates)
