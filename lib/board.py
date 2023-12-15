@@ -73,7 +73,7 @@ class Board:
         return ''.join(lines)
 
     def line_1(self):
-        return ' ' + ' '.join(map(str, range(1, self.size + 1)))
+        return ' ' + ' '.join(map(str, range(1, self.size + 1))) + ' \n'
 
     def randomly_place(self, ship):
         placement = self.random_cells(ship)

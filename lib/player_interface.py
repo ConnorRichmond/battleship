@@ -2,7 +2,7 @@ class PlayerInterface:
     # Main Menu
     def welcome(self):
         print("Welcome to BATTLESHIP\n" +
-              "Enter p to play. Enter q to quit.")
+                "Enter p to play. Enter q to quit.")
         return input().strip().lower()
 
     def quit(self):
@@ -14,7 +14,7 @@ class PlayerInterface:
     # Build Board
     def game_board_intro(self):
         print("Let's build your game board!\n" +
-              "The game board can be 4x4 squares up to 10x10 squares")
+                "The game board can be 4x4 squares up to 10x10 squares")
 
     def get_board_size(self):
         print("Please enter the number of rows and columns you want (min of 4 & max of 10):")
